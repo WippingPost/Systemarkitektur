@@ -7,7 +7,7 @@ public class Main {
 		AbstractFactory factory1 = new Client().getFactory(FactoryType.FACTORY1);
 		AbstractFactory factory2 = new Client().getFactory(FactoryType.FACTORY2);
 
-		if (factory1 == null || factory2 == null) {
+		if (factory1 != null || factory2 != null) {
 			factory1.createProductA();
 			factory1.createProductB();
 			factory2.createProductA();
