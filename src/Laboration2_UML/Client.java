@@ -2,15 +2,15 @@ package Laboration2_UML;
 
 public class Client {
 
-	public static void main(String[] args) {
+	public AbstractFactory getFactory(FactoryType factoryType) {
 
-		AbstractFactory factory1 = new ConcreteFactory1();
-		AbstractFactory factory2 = new ConcreteFactory2();
+		switch(factoryType) {
+		case FACTORY1:
+			return new ConcreteFactory1();
+		case FACTORY2:
+			return new ConcreteFactory2();
+		}
 
-		factory1.createProductA();
-		factory1.createProductB();
-		factory2.createProductA();
-		factory2.createProductB();
-
+		return null;
 	}
 }
